@@ -20,7 +20,10 @@ public class Pascal {
         }
       }
       for (int z = 0; z <= x; z++) {
-        System.out.printf("%d\t", triangle[x][z]);
+        for (int tab = (a-(x+1)); tab > 0 && z < 1; tab--){
+          System.out.printf("\t");
+        }
+        System.out.printf("%d\t\t", triangle[x][z]);
       }
       System.out.println();
     }
