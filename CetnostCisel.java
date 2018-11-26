@@ -2,7 +2,6 @@
  * of their appearance.
  *
  */
-import java.util.Arrays;
 public class CetnostCisel {
   public static void copyFreqArray(int[][] oldArray, int[][] newArray) {
     //copies the array
@@ -54,6 +53,5 @@ public class CetnostCisel {
       frequency[0][z] + "\tCetnost = " + frequency [1][z] + "x"
       );
     }
-    System.out.print(Arrays.deepToString(frequency));
   }
 }
