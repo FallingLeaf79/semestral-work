@@ -7,6 +7,15 @@ public class CetnostCisel {
       System.arraycopy(oldArray[y], 0, newArray[y], 0, oldArray[y].length);
     }
   }
+  public static int getIndexOfLargest(int[] array) {
+    int largest = 0;
+    for (int i = 0; i < array.length; i++) {
+      if (array[i] > array[largest]) {
+        largest = i;
+      }
+    }
+    return largest;
+  }
 
   public static void main(String[] args) {
     java.util.Scanner sc = new java.util.Scanner(System.in);
@@ -43,13 +52,18 @@ public class CetnostCisel {
         frequency[1][frequency[1].length-1] = 1;
       }
     }
-    /*Prints the numbers, and their frequency, in the order in which
-     * they were inputted.
+    /* Prints the numbers and their frequency, in order of their frequency.
+     * (Most frequent values appear at the top)
+     * Every time a number and its frequency is printed, the corresponding
+     * index is set to zero, so as not to influence
+     * the "getIndexOfLargest" algorithm.
      */
     for (int z = 0; z < frequency[0].length; z++) {
       System.out.println(
-      frequency[0][z] + "\tCetnost = " + frequency [1][z] + "x"
+        frequency[0][getIndexOfLargest(frequency[1])] +
+        "\t" + frequency[1][getIndexOfLargest(frequency[1])] + "x"
       );
+      frequency[1][getIndexOfLargest(frequency[1])] = 0;
     }
   }
 }
