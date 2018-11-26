@@ -1,10 +1,8 @@
-/* This program takes user-inputted values and computes the frequency
+/* This program takes user-inputted values and prints the frequency
  * of their appearance.
- *
  */
 public class CetnostCisel {
   public static void copyFreqArray(int[][] oldArray, int[][] newArray) {
-    //copies the array
     for (int y = 0; y < 2; y++) {
       System.arraycopy(oldArray[y], 0, newArray[y], 0, oldArray[y].length);
     }
