@@ -21,23 +21,22 @@ public class Odmocnina {
     return newGuess;
   }
   public static void main (String[] args){
-    if (args.length != 1) {
-      System.out.println("Jedinym argumentem je odmocnovane cislo.");
+    double base = Double.parseDouble(args[0]);
+    if (args.length == 2) {
+      double precision = Double.parseDouble(args[1]);
     }
     else {
-      double base = Double.parseDouble(args[0]);
-      //double precision = Double.parseDouble(args[1]);
-      //note to self: ask teacher if precision should be user-given
       double precision = 0.001;
-      double guess = guessResult(base);
-      double newGuess = iteration(guess, base);
-      while (Math.abs(newGuess - guess) > (precision)) {
-        guess = newGuess;
-        newGuess = iteration(guess, base);
-      }
-      System.out.printf(
-        "Treti odmocnina %f je %f (+- %f).\n", base, newGuess, precision
-        );
     }
+    double guess = guessResult(base);
+    double newGuess = iteration(guess, base);
+    while (Math.abs(newGuess - guess) > (precision)) {
+      guess = newGuess;
+      newGuess = iteration(guess, base);
+    }
+    System.out.printf(
+      "Treti odmocnina %f je %f (+- %f).\n", base, newGuess, precision
+      );
+
   }
 }
