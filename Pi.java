@@ -1,4 +1,5 @@
 /* This program approximates the value of pi using the Monte Carlo method.
+ * User inputs the amount of points, from which the program will calculate pi.
  */
 public class Pi {
   public static boolean inCircle(double x, double y) {
