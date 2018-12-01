@@ -13,14 +13,14 @@ public class Pi {
     int inCircle = 0;
     int all = 0;
     while (all < tries) {
-      double nextX = ((random.nextDouble() * 2) - 1); //values between -1 and 1
-      double nextY = ((random.nextDouble() * 2) - 1);
+      double nextX = random.nextDouble();
+      double nextY = random.nextDouble();
       if (inCircle(nextX, nextY)) {
         inCircle++;
       }
       all++;
     }
-    double pi = ((double)inCircle/all)*4; //4 is the area of the square
+    double pi = ((double)inCircle/all)*4; //ratio is pi/4
     System.out.print(pi);
   }
 }
