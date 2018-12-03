@@ -1,4 +1,4 @@
-/* This program preints out sequences of numbers based on user-inputted
+/* This program prints out sequences of numbers based on user-inputted
  * arguments.
  * If there is only one argument, the program prints out a number sequence
  * from 1 to the inputted number.
