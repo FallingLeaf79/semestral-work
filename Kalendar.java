@@ -23,7 +23,7 @@ public class Kalendar {
   }
   public static void printSeparator(int length, char edge, char fill) {
     System.out.print(edge);
-    repeatStuff(length, fill); //remember 22
+    repeatStuff(length, fill);
     System.out.println(edge);
   }
   public static void printDate(int date) {
@@ -59,26 +59,29 @@ public class Kalendar {
       dayOfWeek = 0;
     }
   }
-  public static void printMonthLine(Calendar cal) {
+  public static void printMonthLine(Calendar cal, char edge) {
     //prints the line with the month name and the year
     String name = (
       getMonthName(cal.get(Calendar.MONTH)) + " " +
       Integer.toString(cal.get(Calendar.YEAR))
     );
-    System.out.print("|");
+    System.out.print(edge);
     //aligning the words to the center of the line
     repeatStuff( 11 - (name.length() / 2) - (name.length() % 2), ' ');
     System.out.print(name);
     repeatStuff( 11 - (name.length() / 2), ' ');
-    System.out.println("|");
+    System.out.println(edge);
   }
   public static void printCalendar(Calendar cal) {
-    printSeparator(22, '.', '-');
-    printMonthLine(cal);
-    printSeparator(22, '|', '-');
-    System.out.println("| Po Ut St Ct Pa So Ne |");
-    printWeekLines(cal, '|');
-    printSeparator(22, '\\', '-');
+    char edge = '|';
+    char sep = '-';
+    int line = 22;
+    printSeparator(line, '.', sep);
+    printMonthLine(cal, edge);
+    printSeparator(line, edge, sep);
+    System.out.println(edge + " Po Ut St Ct Pa So Ne " + edge);
+    printWeekLines(cal, edge);
+    printSeparator(line, '\\', sep);
   }
 
   public static void main(String[] args) {
