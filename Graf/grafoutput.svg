@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	width="550" height="320"
+	viewBox="0 0 550 320">
+		<rect x="10" y="264" width="50" height="46" fill="salmon"/>
+		<rect x="70" y="198" width="50" height="112" fill="salmon"/>
+		<rect x="130" y="235" width="50" height="75" fill="salmon"/>
+		<rect x="190" y="85" width="50" height="225" fill="salmon"/>
+		<rect x="250" y="189" width="50" height="121" fill="salmon"/>
+		<rect x="310" y="10" width="50" height="300" fill="salmon"/>
+		<rect x="370" y="301" width="50" height="9" fill="salmon"/>
+		<rect x="430" y="292" width="50" height="18" fill="salmon"/>
+		<rect x="490" y="235" width="50" height="75" fill="salmon"/>
+</svg>
