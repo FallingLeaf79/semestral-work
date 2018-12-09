@@ -13,15 +13,15 @@ public class Vlnovka {
     int spaceY = (size * 2) - 4 - spaceX;
     int repeats = (int)(80 / (double)((size - 1) * 2));
 
+    repeatStuff(lineNum, ' ');
     if (lineNum == 0 || lineNum == size - 1) {
-      repeatStuff(lineNum, ' ');
       for (int i = 0; i < repeats; i++) {
         System.out.print('#');
         repeatStuff((size * 2) - 3, ' ');
       }
     }
+
     else {
-      repeatStuff(lineNum, ' ');
       for (int i = 0; i < repeats; i++) {
         System.out.print('#');
         repeatStuff(spaceX, ' ');
