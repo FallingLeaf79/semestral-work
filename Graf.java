@@ -41,7 +41,7 @@ public class Graf {
     return array;
   }
 
-  public static void main(String[] args) throws IOException{
+  public static void main(String[] args) throws IOException {
     int[] values = new int[0];
     int max = 0;
     java.util.Scanner sc = new java.util.Scanner(System.in);
