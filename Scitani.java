@@ -10,7 +10,7 @@ public class Scitani {
 
     while (problems > 0) {
       a = random.nextInt(max);
-      b = random.nextInt(max);
+      b = random.nextInt(max - a);
       System.out.println(a + " + " + b + " = ?");
       problems--;
     }
