@@ -25,9 +25,9 @@ public class Graf {
   public static String rectangle(
     String color, int width, int height, int positionX, int positionY
   ) {
-    return (
-      "\t\t<rect x=\"" + positionX + "\" y=\"" + positionY + "\" width=\"" +
-      width + "\" height=\"" + height + "\" fill=\"" + color + "\"/>\n"
+    return String.format(
+      "\t\t<rect x=\"%d\" y=\"%d\" width=\"%d\" height=\"%d\" fill=\"%s\"/>\n",
+      positionX, positionY, width, height, color
     );
   }
 
