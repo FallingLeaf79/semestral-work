@@ -20,10 +20,17 @@ public class Seq {
     if (args.length == 3) {
       step = Integer.parseInt(args[1]);
     }
-
-    while (num <= end) {
-      System.out.print(num + " ");
-      num += step;
+    if (step < 0) {
+      while (num >= end) {
+        System.out.print(num + " ");
+        num += step;
+      }
+    }
+    else {
+      while (num <= end) {
+        System.out.print(num + " ");
+        num += step;
+      }
     }
   }
 }

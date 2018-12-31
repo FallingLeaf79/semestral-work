@@ -20,14 +20,9 @@ public class Odmocnina {
     return newGuess;
   }
 
-  public static void main (String[] args){
+  public static void main (String[] args) {
     double base = Double.parseDouble(args[0]);
-    if (args.length == 2) {
-      double precision = Double.parseDouble(args[1]);
-    }
-    else {
-      double precision = 0.001;
-    }
+    double precision = args.length == 2 ? Double.parseDouble(args[1]) : 0.001;
 
     double guess = guessResult(base);
     double newGuess = iteration(guess, base);
